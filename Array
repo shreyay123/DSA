@@ -40,7 +40,8 @@
     }
 }
 
-3.public class MoveZeros {
+3.Move All Zeros to End of Array
+public class MoveZeros {
     public static void moveZeroes(int[] arr) {
         int index = 0; // position for non-zero
 
@@ -67,3 +68,24 @@
         }
     }
 }
+
+4.Find the Missing Number in an Array
+public class MissingNumber {
+    public static int findMissing(int[] arr) {
+        int n = arr.length;
+        int expectedSum = (n + 1) * (n + 2) / 2;
+        int actualSum = 0;
+
+        for (int num : arr) {
+            actualSum += num;
+        }
+
+        return expectedSum - actualSum;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 5, 6};
+        System.out.println(findMissing(arr));
+    }
+}
+
